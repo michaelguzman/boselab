@@ -1,5 +1,12 @@
+#!/usr/bin/env python
 import sys
+"""
+This script requires two input files: 1. goodproteins.fasta (file used in OrthoMCL clustering) and 2. groups.txt
 
+Useage: python groups_matrix.py <goodproteins.fasta> <groups.txt> >out.matrix
+
+
+"""
 class Cluster:
     def __init__(self, name):
         self.name = name
