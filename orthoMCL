@@ -1,0 +1,30 @@
+How to make a gene accummulation plot:
+
+
+XXX. OrthoMCL groups.txt file into binary matrix for accummulation plot generation
+
+
+
+XXX. GENE ACCUMULATION PLOT (RStudio)
+
+Input the binary matrix file created from running groups_matrix.py on the OrthoMCL groups.txt file and the goodproteins.fasta file.
+	$ python groups_matrix.py goodprotein.fasta groups.txt >out.matrix
+
+Open R Studio and install the vegan package:
+	> install.packages("vegan")
+	> library(vegan)
+
+Import your data:
+	> rhodo.out <- read.table("~/Documents/vegan/rhodo-out.matrix", header=TRUE, quote="\"")
+
+Run vegan:
+	> sp <- specaccum(rhodo.out, method = "random", permutations=100)
+
+View data (optional):
+	> summary(sp)
+
+Plot data:
+	> plot(sp, ci.type= "poly", col="blue", lwd=2, ci.lty=0, ci.col="lightblue", xlab="Genomes", ylab="Proteins", main="Gene accumulation plot")
+
+Add boxplot to data:
+	> boxplot(sp, col="yellow", add=TRUE)
