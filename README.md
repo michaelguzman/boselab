@@ -1,4 +1,4 @@
 # boselab
-Bose Lab scripts
+Bose Lab Genomics Pipeline
 
-These are scripts used in our genomics pipeline and notes on how to use each program to process NGS data of bacterial genomes, high-GC organims in particular.
+These are tools used in our genomics pipeline. Included are notes on how to use each script to process NGS data of bacterial genomes.
