@@ -20,3 +20,6 @@ Command line: /Users/boselab/SPAdes-3.7.1-Darwin/bin/spades.py -o /Users/boselab
 Ran velvet with multiple k-mer values:
 $ velveth ../velvet/ 21,131,10 -shortPaired -fastq -separate ../../Genomes-isolates/G4A_S11_L001/QC1-trimming/G4A_S11_L001_forward_paired.fq ../../Genomes-isolates/G4A_S11_L001/QC1-trimming/G4A_S11_L001_reverse_paired.fq
 
+Ran QUAST 3.2 on the Velvet and SPAdes assemblies on the pre-diginorm data.
+$ quast.py -o quast/ -R Rs.fa --min-contig 500 --threads 4 --gene-finding --reads1 ../Genomes-isolates/G4A_S11_L001/QC1-trimming/G4A_S11_L001_forward_paired.fq --reads2 ../Genomes-isolates/G4A_S11_L001/QC1-trimming/G4A_S11_L001_reverse_paired.fq spades/contigs.fasta velvet1/_41/contigs.fa velvet1/_51/contigs.fa velvet1/_61/contigs.fa velvet1/_71/contigs.fa 
+/Users/boselab/quast-3.2/quast.py -o quast/ -R Rs.fa --min-contig 500 --threads 4 --gene-finding  --reads1 ../Genomes-isolates/G4A_S11_L001/QC1-trimming/G4A_S11_L001_forward_paired.fq --reads2 ../Genomes-isolates/G4A_S11_L001/QC1-trimming/G4A_S11_L001_reverse_paired.fq spades/contigs.fasta velvet1/_41/contigs.fa velvet1/_51/contigs.fa velvet1/_61/contigs.fa velvet1/_71/contigs.fa
