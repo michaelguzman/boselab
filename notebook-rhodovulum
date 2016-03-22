@@ -24,5 +24,5 @@ $ quast.py -o quast/ -R Rs.fa --min-contig 500 --threads 4 --gene-finding --read
 
 Ran SPAdes on diginorm PE reads.
 
-Running QUAST 3.2 on the Velvet and SPAdes assemblies of post-diginorm data.
-
+Running QUAST 3.2 on the Velvet and SPAdes assemblies of post-diginorm data, mapping the normalized reads to these genomes.
+$ quast.py -o ../quast/ -R ../../Rs.fa --min-contig 500 --threads 4 --gene-finding --reads1 ../../../Genomes-isolates/G4A_S11_L001/QC2-normalization/G4A_S11_L001_normalized-for.fq --reads2 ../../../Genomes-isolates/G4A_S11_L001/QC2-normalization/G4A_S11_L001_normalized-rev.fq ../spades/scaffolds.fasta ../../../Genomes-isolates/G4A_S11_L001/QC2-normalization/velvet/k23/contigs.fa ../../../Genomes-isolates/G4A_S11_L001/QC2-normalization/velvet/k27/contigs.fa ../../../Genomes-isolates/G4A_S11_L001/QC2-normalization/velvet/k29/contigs.fa ../../../Genomes-isolates/G4A_S11_L001/QC2-normalization/velvet/k31/contigs-k31.fa ../../../Genomes-isolates/G4A_S11_L001/QC2-normalization/velvet/k41/contigs-k41.fa ../../../Genomes-isolates/G4A_S11_L001/QC2-normalization/velvet/k51/contigs-k51.fa ../../../Genomes-isolates/G4A_S11_L001/QC2-normalization/velvet/k61/contigs-k61.fa ../../../Genomes-isolates/G4A_S11_L001/QC2-normalization/velvet/k71/contigs-k71.fa 
