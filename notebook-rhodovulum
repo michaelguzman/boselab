@@ -26,3 +26,67 @@ Ran SPAdes on diginorm PE reads.
 
 Running QUAST 3.2 on the Velvet and SPAdes assemblies of post-diginorm data, mapping the normalized reads to these genomes.
 $ quast.py -o ../quast/ -R ../../Rs.fa --min-contig 500 --threads 4 --gene-finding --reads1 ../../../Genomes-isolates/G4A_S11_L001/QC2-normalization/G4A_S11_L001_normalized-for.fq --reads2 ../../../Genomes-isolates/G4A_S11_L001/QC2-normalization/G4A_S11_L001_normalized-rev.fq ../spades/scaffolds.fasta ../../../Genomes-isolates/G4A_S11_L001/QC2-normalization/velvet/k23/contigs.fa ../../../Genomes-isolates/G4A_S11_L001/QC2-normalization/velvet/k27/contigs.fa ../../../Genomes-isolates/G4A_S11_L001/QC2-normalization/velvet/k29/contigs.fa ../../../Genomes-isolates/G4A_S11_L001/QC2-normalization/velvet/k31/contigs-k31.fa ../../../Genomes-isolates/G4A_S11_L001/QC2-normalization/velvet/k41/contigs-k41.fa ../../../Genomes-isolates/G4A_S11_L001/QC2-normalization/velvet/k51/contigs-k51.fa ../../../Genomes-isolates/G4A_S11_L001/QC2-normalization/velvet/k61/contigs-k61.fa ../../../Genomes-isolates/G4A_S11_L001/QC2-normalization/velvet/k71/contigs-k71.fa 
+
+
+2016-04-07
+Received all of the genomes from GTAC this week. They are downloaded and located on the iMac: /Users/boselab/Documents/Michael/Bose_MiSeq_R294
+
+
+GTAC_ID	Sample
+25267	3-BR3
+25271	7-BR19
+25275	11-BR27
+25276	12-BR28
+25277	13-BR36
+25279	15-BR4
+25280	16-BR9
+25281	17-BR10
+25283	19-BR22
+25284	20-BR25
+25285	21-BR26
+25288	24-BR29
+25289	25-BR31
+25291	27-BR39
+25292	28-BR40
+25293	29-G1A
+25294	31-G2A
+25295	32-G3A
+25296	33-G3T
+25297	35-G4T
+25298	YQ
+
+
+Running Trimmomatic using the following command for all genomes:
+java -jar ../../Genomics_Software/Trimmomatic-0.33/trimmomatic-0.33.jar PE -trimlog 25267.trimlog 25267_S1_L001_R1_001.fastq.gz 25267_S1_L001_R2_001.fastq.gz 25267_FP.fq 25267_RP.fq 25267_FU.fq 25267_RU.fq ILLUMINACLIP:TruSeq2-PE.fa:2:28:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+TrimmomaticPE: Started with arguments: -trimlog 25267.trimlog 25267_S1_L001_R1_001.fastq.gz 25267_S1_L001_R2_001.fastq.gz 25267_FP.fq 25267_RP.fq 25267_FU.fq 25267_RU.fq ILLUMINACLIP:TruSeq2-PE.fa:2:28:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+25267: Input Read Pairs: 539520 Both Surviving: 342940 (63.56%) Forward Only Surviving: 190925 (35.39%) Reverse Only Surviving: 1558 (0.29%) Dropped: 4097 (0.76%)
+25271: Input Read Pairs: 554792 Both Surviving: 352525 (63.54%) Forward Only Surviving: 182317 (32.86%) Reverse Only Surviving: 5168 (0.93%) Dropped: 14782 (2.66%)
+25275: Input Read Pairs: 573527 Both Surviving: 430502 (75.06%) Forward Only Surviving: 137999 (24.06%) Reverse Only Surviving: 1386 (0.24%) Dropped: 3640 (0.63%)
+25276: Input Read Pairs: 633726 Both Surviving: 393646 (62.12%) Forward Only Surviving: 232799 (36.73%) Reverse Only Surviving: 1962 (0.31%) Dropped: 5319 (0.84%)
+25277: Input Read Pairs: 481652 Both Surviving: 273093 (56.70%) Forward Only Surviving: 201441 (41.82%) Reverse Only Surviving: 1906 (0.40%) Dropped: 5212 (1.08%)
+25279: Input Read Pairs: 413563 Both Surviving: 206987 (50.05%) Forward Only Surviving: 149665 (36.19%) Reverse Only Surviving: 13713 (3.32%) Dropped: 43198 (10.45%)
+25280: Input Read Pairs: 394758 Both Surviving: 219706 (55.66%) Forward Only Surviving: 161875 (41.01%) Reverse Only Surviving: 3290 (0.83%) Dropped: 9887 (2.50%)
+25281: Input Read Pairs: 464789 Both Surviving: 271010 (58.31%) Forward Only Surviving: 120035 (25.83%) Reverse Only Surviving: 17200 (3.70%) Dropped: 56544 (12.17%)
+25283: Input Read Pairs: 458810 Both Surviving: 261438 (56.98%) Forward Only Surviving: 186674 (40.69%) Reverse Only Surviving: 2762 (0.60%) Dropped: 7936 (1.73%)
+25284: Input Read Pairs: 243551 Both Surviving: 132297 (54.32%) Forward Only Surviving: 104143 (42.76%) Reverse Only Surviving: 1762 (0.72%) Dropped: 5349 (2.20%)
+25285: Input Read Pairs: 187308 Both Surviving: 104822 (55.96%) Forward Only Surviving: 78703 (42.02%) Reverse Only Surviving: 965 (0.52%) Dropped: 2818 (1.50%)
+25288: Input Read Pairs: 875224 Both Surviving: 590109 (67.42%) Forward Only Surviving: 272271 (31.11%) Reverse Only Surviving: 3635 (0.42%) Dropped: 9209 (1.05%)
+25289: Input Read Pairs: 518187 Both Surviving: 338498 (65.32%) Forward Only Surviving: 165688 (31.97%) Reverse Only Surviving: 3687 (0.71%) Dropped: 10314 (1.99%)
+25291: Input Read Pairs: 520302 Both Surviving: 318819 (61.28%) Forward Only Surviving: 196907 (37.84%) Reverse Only Surviving: 1205 (0.23%) Dropped: 3371 (0.65%)
+25292: Input Read Pairs: 519794 Both Surviving: 350629 (67.46%) Forward Only Surviving: 151821 (29.21%) Reverse Only Surviving: 4478 (0.86%) Dropped: 12866 (2.48%)
+25293: Input Read Pairs: 450604 Both Surviving: 284937 (63.23%) Forward Only Surviving: 163337 (36.25%) Reverse Only Surviving: 748 (0.17%) Dropped: 1582 (0.35%)
+25294: Input Read Pairs: 480949 Both Surviving: 313326 (65.15%) Forward Only Surviving: 124624 (25.91%) Reverse Only Surviving: 10570 (2.20%) Dropped: 32429 (6.74%)
+25295: Input Read Pairs: 435439 Both Surviving: 252075 (57.89%) Forward Only Surviving: 154656 (35.52%) Reverse Only Surviving: 6635 (1.52%) Dropped: 22073 (5.07%)
+25296: Input Read Pairs: 676943 Both Surviving: 375497 (55.47%) Forward Only Surviving: 296413 (43.79%) Reverse Only Surviving: 1292 (0.19%) Dropped: 3741 (0.55%)
+25297: Input Read Pairs: 675065 Both Surviving: 463620 (68.68%) Forward Only Surviving: 208117 (30.83%) Reverse Only Surviving: 1160 (0.17%) Dropped: 2168 (0.32%)
+
+After trimming, manually checked per base sequence quality and adapter content using FastQC. All PE libraries had good quality and passed QC check.
+All libraries had good quality (>=20 phred33 score) up to ~250 bases.
+
+
+
+
+
+
+
