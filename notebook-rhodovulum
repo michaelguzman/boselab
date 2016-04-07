@@ -89,6 +89,6 @@ Ran SPAdes using default parameters: /Users/boselab/SPAdes-3.7.1-Darwin/bin/spad
 Also ran SPAdes using custom k-values: Command line: /Users/boselab/SPAdes-3.7.1-Darwin/bin/spades.py -o /Users/boselab/Documents/Michael/Bose_MiSeq_R294/spades_assembly -1 /Users/boselab/Documents/Michael/Bose_MiSeq_R294/trimmed/25267_FP.fq -2 /Users/boselab/Documents/Michael/Bose_MiSeq_R294/trimmed/25267_RP.fq -k 21,31,41,51,61,71,81,91,101,111,121,127 --careful
 
 I compared these assemblies using QUAST.
-
+quast.py -o spades_assembly/quast-25267/ -R spades_assembly/Rs.fa -m 500 -t 4 -f -1 trimmed/25267_forpair.fq -2 trimmed/25267_revpair.fq spades_assembly/25267-customk/contigs.fasta spades_assembly/25267-customk/scaffolds.fasta spades_assembly/25267-defaultk/contigs.fasta spades_assembly/25267-defaultk/scaffolds.fasta 
 
 
