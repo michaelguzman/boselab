@@ -99,4 +99,6 @@ I will move forward and do assemblies with these k-values using SPAdes: 21,25,31
 
 2016-04-08
 Samples 25297 and 25298 were swapped. 25298 is Streptomyces, while 25297 is the Woods Hole isolate.
+All assemblies are located in: /Users/boselab/Documents/Michael/Bose_MiSeq_R294/spades_assembly
+
 
