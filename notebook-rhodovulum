@@ -1,8 +1,8 @@
 #Bose Lab Notebook for Rhodovulum project.
-
+'''
 Project Summary:
-
-2016-03-21
+''''
+#####2016-03-21
 Location of paired-end reads after adapter trimming: /Users/boselab/Documents/Michael/Sequencing/Genomes-isolates/G4A_S11_L001/QC1-trimming
 Location of paired-end reads after digital normalization:/Users/boselab/Documents/Michael/Sequencing/Genomes-isolates/G4A_S11_L001/QC2-normalization
 Working on assessing the quality of various genome assemblers using paired-end Illumina 2x250 data. The G4A genome is a Rhodovulum strain
