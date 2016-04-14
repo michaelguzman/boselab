@@ -276,3 +276,5 @@ GIT Genome contamination:
 The GIT genome that was Illumina sequenced during the Woods Hole course (Bose Anaero stock #30) is a Rhodovulum species and a Maribacter species.
 I assembled this genome using Velvet and found that about half of the contigs and reads actually assemble to the R. sulfidophilum DSM 2351 genome.
 
+2016-04-16
+Uploaded all of the SPAdes assembled genomes onto the RAST v2.0 server using the RAStk pipeline for annotation. I also uploaded all 4 published draft/complete Rhodovulum genomes.
