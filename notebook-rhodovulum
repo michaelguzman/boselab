@@ -286,13 +286,12 @@ This de novo approach does not seem optimal since there are several draft and co
 
 2016-04-20
 After resesearching varaious scaffolding tools I decided on the Medusa web server (http://combo.dbe.unifi.it/medusa). This scaffolder was published in 2015 and has the great features of being able to use multiple reference genomes as guides for scaffolding.
-This is superior to Contiguator which can only use one genome as a guide. I am now inputting all of the SPAdes contig files into Medusa using the four publicly available Rhodovulum genomes as references.
+This is superior to Contiguator which can only use one genome as a guide. I am now inputting all of the SPAdes contig files into Medusa using 3/4 publicly available Rhodovulum genomes as references.
 
 I am then mapping the reads using Bowtie2 in Geneious and visually inspecting the mapping.
 Reference files:
 GCA_000293785.1_ASM29378v1_genomic
 GCA_000520135.2_ASM52013v2_genomic
-GCA_000756565.1_ASM75656v1_genomic
 GCA_001548075.1_ASM154807v1_genomic
 
 After a first pass test with the 25267 SPAdes genome, the trimmed reads mapping rate was 98.7% based on the assembly report.
