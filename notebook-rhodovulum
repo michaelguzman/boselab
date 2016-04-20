@@ -278,3 +278,7 @@ I assembled this genome using Velvet and found that about half of the contigs an
 
 2016-04-16
 Uploaded all of the SPAdes assembled genomes onto the RAST v2.0 server using the RAStk pipeline for annotation. I also uploaded all 4 published draft/complete Rhodovulum genomes.
+
+2016-04-19
+I have been working on coming up with a good way to de novo scaffold the contigs. I decided on importing the contigs into Geneious v9.1.3 and using the Geneious de novo assembler with custom settings.
+
