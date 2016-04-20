@@ -281,4 +281,23 @@ Uploaded all of the SPAdes assembled genomes onto the RAST v2.0 server using the
 
 2016-04-19
 I have been working on coming up with a good way to de novo scaffold the contigs. I decided on importing the contigs into Geneious v9.1.3 and using the Geneious de novo assembler with custom settings.
+The Geneious scaffolding approach produced many incorrect scaffolds and had multiple assemblies of contigs that were incorrect after BLAST analysis of joined regions using Rhodovulum as a reference.
+This de novo approach does not seem optimal since there are several draft and complete Rhodovulum genomes available.
 
+2016-04-20
+After resesearching varaious scaffolding tools I decided on the Medusa web server (http://combo.dbe.unifi.it/medusa). This scaffolder was published in 2015 and has the great features of being able to use multiple reference genomes as guides for scaffolding.
+This is superior to Contiguator which can only use one genome as a guide. I am now inputting all of the SPAdes contig files into Medusa using the four publicly available Rhodovulum genomes as references.
+
+I am then mapping the reads using Bowtie2 in Geneious and visually inspecting the mapping.
+Reference files:
+GCA_000293785.1_ASM29378v1_genomic
+GCA_000520135.2_ASM52013v2_genomic
+GCA_000756565.1_ASM75656v1_genomic
+GCA_001548075.1_ASM154807v1_genomic
+
+After a first pass test with the 25267 SPAdes genome, the trimmed reads mapping rate was 98.7% based on the assembly report.
+Assembly Report:
+677,566 of 685,880 reads were assembled to scaffold-medusa to produce 74 contigs
+8,314 reads were not assembled  Assembled 2 documents using Bowtie2 - fast and accurate read mapper.
+Show Options Assembly Duration: 3 minutes and 16 seconds (3 minutes and 33 seconds CPU time)  
+Commands run: bowtie2-build-s BowtieCombinedReferenceSequences.fasta myIndex bowtie2-align-s -I 0 -X 800 -p 4 --very-sensitive -q -x myIndex -1 forwardReads.fastq -2 reverseReads.fastq -S bowtie.sam Bowtie command line duration: 57 seconds 
