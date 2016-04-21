@@ -300,3 +300,12 @@ Assembly Report:
 8,314 reads were not assembled  Assembled 2 documents using Bowtie2 - fast and accurate read mapper.
 Show Options Assembly Duration: 3 minutes and 16 seconds (3 minutes and 33 seconds CPU time)  
 Commands run: bowtie2-build-s BowtieCombinedReferenceSequences.fasta myIndex bowtie2-align-s -I 0 -X 800 -p 4 --very-sensitive -q -x myIndex -1 forwardReads.fastq -2 reverseReads.fastq -S bowtie.sam Bowtie command line duration: 57 seconds 
+
+2016-04-21
+Medusa is working well to scaffold the genomes using the Rhodovulum complete reference genomes from DSM 1374 and DSM 2351. I am then using the Contiguator tool to generate a scaffold reference sequence for annotation.
+I am using the DSM 2351 as the reference. This genome has 3 plasmids and I am seeing that the scaffolds align well to all three of these scaffolds.
+The DSM 1374 strain only has two plasmids, leaving out these plasmid sequences.
+
+I am now only using 2/4 Rhodovulum references for scaffolding in Medusa. These are the only two genomes with high genome coverage and genome organization to the isolates.
+GCA_000520135.2_ASM52013v2_genomic
+GCA_001548075.1_ASM154807v1_genomic
