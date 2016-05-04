@@ -309,3 +309,12 @@ The DSM 1374 strain only has two plasmids, leaving out these plasmid sequences.
 I am now only using 2/4 Rhodovulum references for scaffolding in Medusa. These are the only two genomes with high genome coverage and genome organization to the isolates.
 GCA_000520135.2_ASM52013v2_genomic
 GCA_001548075.1_ASM154807v1_genomic
+
+2016-05-03
+Predicted ORFs using GeneMarkS v4.28. Located here: /Users/boselab/Documents/Michael/Bose_MiSeq_R294/scaffolds/contiguator/ORFs
+Now running ORFs on OrthoMCL to define core genome.
+1. Run OrthoMCLadjustfasta.pl to reformat header of each ORF fasta file.
+      perl orthomcladjustfasta.pl G4A ../scaffolds/contiguator/ORFs/G4A.fasta 1
+2. Run adjusted fasta files in orthoMCLFilterFasta to filter out sequences <10 amino acids >20% stop codons (suggested parameters). This will output a goodProteins.fasta and poorProteins.fasta file. This is all of the proteins from all the genomes in one file.
+      perl orthomclfilterfasta.pl adjusted/ 10 20
+3. Make db on insidedna.me by running formatdb using the goodProteins.fasta and badProteins.fasta files.
