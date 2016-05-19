@@ -318,3 +318,50 @@ Now running ORFs on OrthoMCL to define core genome.
 2. Run adjusted fasta files in orthoMCLFilterFasta to filter out sequences <10 amino acids >20% stop codons (suggested parameters). This will output a goodProteins.fasta and poorProteins.fasta file. This is all of the proteins from all the genomes in one file.
       perl orthomclfilterfasta.pl adjusted/ 10 20
 3. Make db on insidedna.me by running formatdb using the goodProteins.fasta and badProteins.fasta files.
+
+2016-05-19
+Scaffolded the Rhodobacter 25288 genome to Rhodobacter sphaeroides 2.4.1 and R. sphaeroides KD131 using Medusa. Then scaffolded the resulting contigs to KD131 using Contiguator.
+Ended up with 2 chromosomes and 2 plasmids. The KD131 genome was used because it had the highest mapping rate and synteny between the 25288 genome.
+
+The 25288 genome is contaminated with many Rhodovulum reads. This might be because there was cross contamination during genomic DNA prep or library prep.
+I will also check this strain to make sure that it is pure. It might be a good idea to streak out all of the strains at least 1-2 times and resave to make sure they are clean.
+List of Medusa contigs that mapped to KD131 in Contiguous:
+Reference replicon CP001151.1
+Scaffold_2524	1525
+Scaffold_2485	1219
+Scaffold_498	1258
+Scaffold_4	765557
+Scaffold_828	62623
+Scaffold_3	251854
+
+Reference replicon CP001150.1
+Scaffold_9	614571
+Scaffold_1365	1432
+Scaffold_250	1457
+Scaffold_541	1238
+Scaffold_1484	1112
+Scaffold_2228	1408
+Scaffold_1525	2137
+Scaffold_337	1213
+Scaffold_8	2798494
+Scaffold_2329	1570
+Scaffold_397	1978
+Scaffold_1985	1135
+Scaffold_24	1784
+Scaffold_295	1313
+Scaffold_2382	1954
+Scaffold_1703	1207
+Scaffold_1301	1576
+Scaffold_1912	2186
+Scaffold_1586	1221
+Scaffold_192	1447
+Scaffold_301	1637
+Scaffold_2301	1994
+
+Reference replicon CP001152.1
+Scaffold_1477	198588
+
+Reference replicon CP001153.1
+Scaffold_5	105497
+Scaffold_639	1555
+Scaffold_424	1185
