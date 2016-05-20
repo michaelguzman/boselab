@@ -1,0 +1,28 @@
+Generating OrthoMCL groups.txt file and transformating into binary matrix for accummulation plot generation in RStudio.
+1. First convert OrthoMCL output file into a groups file using orthomclMclToGroups. This can be done on InsideDNA or using the orthomclMclToGroups.pl script.
+
+This will output something that looks like this, with multiple lines for each group of orthologous genes: 
+
+rhodovulum1000: 25267|gene_4096 25267|gene_4153 25267|gene_4097 25267|gene_4152 25271|gene_4457 25271|gene_942 25271|gene_4458 25275|gene_1066 25275|gene_4616 25275|gene_1067 25275|gene_4617 25276|gene_3899 25276|gene_4417 25276|gene_3900 25276|gene_4418 25279|gene_4845 25279|gene_980 25280|gene_1081 25280|gene_626 25280|gene_1082 25280|gene_4366 25281|gene_1079 25281|gene_4763 25281|gene_1080 25281|gene_4764 25284|gene_4516 25284|gene_827 25284|gene_4517 25284|gene_828 25296|gene_4479 25296|gene_914 25296|gene_4480 25296|gene_915 25298|gene_1512 25298|gene_4724 25298|gene_1513 25298|gene_4723 G4A|gene_3468 G4A|gene_769 G4A|gene_3469 G4A|gene_768 25277|gene_4072 25283|gene_4250 25285|gene_1151 25285|gene_5256 25292|gene_2807 25279|gene_979 25285|gene_1149 25292|gene_2808 25279|gene_4843
+
+2. Input the binary matrix file created from running groups_matrix.py on the OrthoMCL groups.txt file and the goodproteins.fasta file.
+	$ python groupstobinarymatrix.py goodprotein.fasta groups.txt >out.matrix
+	
+3. Open R Studio and install the vegan package:
+	> install.packages("vegan")
+	> library(vegan)
+
+4. Import your data:
+	> rhodo.out <- read.table("~/Documents/vegan/rhodo-out.matrix", header=TRUE, quote="\"")
+
+5. Run vegan:
+	> sp <- specaccum(rhodo.out, method = "random", permutations=100)
+
+6. View data (optional):
+	> summary(sp)
+
+7. Plot data:
+	> plot(sp, ci.type= "poly", col="blue", lwd=2, ci.lty=0, ci.col="lightblue", xlab="Genomes", ylab="Proteins", main="Gene accumulation plot")
+
+8. Add boxplot to data:
+	> boxplot(sp, col="yellow", add=TRUE)
