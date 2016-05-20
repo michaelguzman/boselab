@@ -3737,5 +3737,45 @@ Scaffold_34	204
 
 2016-05-19
 Phylogenetic tree construction of conserved core genes:
-recN, lig, dnaX, glyA, cysS
+These are some candidates: recN, lig, dnaX, glyA, cysS. They should be conserved between all strains and only have one copy. These are the top 5 genes in the Zeigler et al. 2003 study.
 
+
+2016-05-19
+BLASTn on a few contigs from the 25294 and 25295 genomes revealed only one top hit: Marichromatium purpuratum 984.
+I downloaded this genome from NCBI and will use this genome as a scaffold in Medusa or Contiguator.
+
+Contiguator scaffold:
+Reference replicon CP007031.1
+Scaffold_1	3754627
+Scaffold_11	4952
+Scaffold_23	2058
+
+Unmapped contigs:
+Scaffold_2	400
+Scaffold_3	449
+Scaffold_4	416
+Scaffold_5	380
+Scaffold_6	612
+Scaffold_7	448
+Scaffold_8	217
+Scaffold_9	128
+Scaffold_10	460
+Scaffold_12	5513
+Scaffold_13	382
+Scaffold_14	387
+Scaffold_15	385
+Scaffold_16	133
+Scaffold_17	388
+Scaffold_18	385
+Scaffold_19	397
+Scaffold_20	386
+Scaffold_21	501
+Scaffold_22	378
+Scaffold_24	393
+Scaffold_25	388
+Scaffold_26	384
+Scaffold_27	411
+Scaffold_28	420
+Scaffold_29	385
+Scaffold_30	412
+Scaffold_31	414
