@@ -3890,4 +3890,29 @@ ARRHGEQQLALDYATKLQRLGPP
 
 Blasting these proteins shows conserved decaheme domains (CXXCH motif).
 
+2016-10-04
+Recieved Illumina reads from GTAC. Location: /Users/boselab/Documents/Michael/Bose_MiSeq_R343
 
+Running trimmomatic: java -jar ../../Genomics_Software/Trimmomatic-0.33/trimmomatic-0.33.jar PE -trimlog 29444.trimlog 29444_S3_L001_R1_001.fastq.gz 29444_S3_L001_R2_001.fastq.gz 29444_FP.fq 29444_RP.fq 29444_FU.fq 29444_RU.fq ILLUMINACLIP:TruSeq2-PE.fa:2:28:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+Location of original reads: https://htcf.wustl.edu/files/B0M2OVdO/
+Samples:
+29440 YQ-2016    
+29441 AB22 
+29444 7 Deg-1 
+29445 7 Deg-3 
+29447 AB14 
+29449 AB26 
+30169 AB24 
+30171 RR 
+30610 Ethane-3 
+30611 Ethane-4
+
+29441: Input Read Pairs: 1223400 Both Surviving: 1064301 (87.00%) Forward Only Surviving: 147296 (12.04%) Reverse Only Surviving: 6213 (0.51%) Dropped: 5590 (0.46%)
+29444: Input Read Pairs: 2174630 Both Surviving: 1844244 (84.81%) Forward Only Surviving: 68192 (3.14%) Reverse Only Surviving: 79426 (3.65%) Dropped: 182768 (8.40%)
+29445: Input Read Pairs: 2367992 Both Surviving: 2081653 (87.91%) Forward Only Surviving: 73879 (3.12%) Reverse Only Surviving: 63413 (2.68%) Dropped: 149047 (6.29%)
+29447: Input Read Pairs: 1250242 Both Surviving: 984787 (78.77%) Forward Only Surviving: 146299 (11.70%) Reverse Only Surviving: 34519 (2.76%) Dropped: 84637 (6.77%)
+29449: Input Read Pairs: 1378245 Both Surviving: 1359601 (98.65%) Forward Only Surviving: 45 (0.00%) Reverse Only Surviving: 18208 (1.32%) Dropped: 391 (0.03%)
+30169: Input Read Pairs: 1058370 Both Surviving: 889777 (84.07%) Forward Only Surviving: 131833 (12.46%) Reverse Only Surviving: 13228 (1.25%) Dropped: 23532 (2.22%)
+30171
+30610
+30611
