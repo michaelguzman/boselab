@@ -3920,3 +3920,15 @@ Samples:
 
 -------------ASSEMBLY-------------
 Assembly with CLC genomics custom pipeline.
+
+
+Rhodovulum genome assembly steps:
+Did adaptive trimming with Trimmomatic using Truseq2-PE adapters and a custom list (below). Then did quality and adapter trimming in CLC using the same list.
+Did CLC trimming on both paired and unpaired reads, then used both sets of reads in de novo assembly.
+After de novo assembly, did BLAST on all contigs in Geneious to filter contaminating contigs from human, phiX, Streptomyces (on same lane)...
+Then did scaffolding in Medusa. Used DSM 2351 for AB14 and AB26. Used SNK001 for AB30. Then did one more round of BLAST on the contigs and filtering.
+For AB30, after scaffolding I noticed a 10kb contig. This contig blasted to the R. sulfidophilum SNK001 chromosome (DSM 1374).
+Because of this, it seemed like the DSM 2351 was not a good reference as it did not place this contig in the chromosome because it did not have homology.
+After using SNK001 as the reference I was able to get this contig to scaffold into the genome.
+
+
